@@ -73,14 +73,14 @@
   transition: color var(--transition-duration) var(--transition-timing-function),
     background-color var(--transition-duration)
       var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--used-color);
+  }
 }
 
 .soc__icon {
   fill: currentColor;
-}
-
-.soc__link:hover,
-.soc__link:focus {
-  background-color: var(--accent-color);
-  color: var(--used-color);
 }

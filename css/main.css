@@ -145,11 +145,14 @@ img {
   color: var(--main-color);
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
+.header-list__link:hover, .header-list__link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
 
 .current {
   color: var(--accent-color);
 }
-
 .current::after {
   content: "";
   position: absolute;
@@ -169,18 +172,14 @@ img {
   color: var(--body-color);
   transition: color var(--transition-duration) var(--transition-timing-function), fill var(--transition-duration) var(--transition-timing-function);
 }
+.header-contacts__link:hover, .header-contacts__link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
 
 .header-contacts__icon {
   fill: currentColor;
   margin-right: 10px;
-}
-
-.header-list__link:hover,
-.header-contacts__link:hover,
-.header-list__link:focus,
-.header-contacts__link:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
 }
 
 /*------------Cекция Герой-Hero------------*/
@@ -367,15 +366,13 @@ img {
   color: var(--icon-color);
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
+.soc__link:hover, .soc__link:focus {
+  background-color: var(--accent-color);
+  color: var(--used-color);
+}
 
 .soc__icon {
   fill: currentColor;
-}
-
-.soc__link:hover,
-.soc__link:focus {
-  background-color: var(--accent-color);
-  color: var(--used-color);
 }
 
 /*------------Секция Постоянные клиенты------------*/
@@ -408,15 +405,13 @@ img {
   color: var(--icon-color);
   transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
 }
+.clients__link:hover, .clients__link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
 
 .clients__icon {
   fill: currentColor;
-}
-
-.clients__link:hover,
-.clients__link:focus {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
 }
 
 /*------------Подвал сайта-Footer------------*/
@@ -459,10 +454,8 @@ img {
   color: var(--used-transparent-color);
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
-
-.footer__link--mail:hover,
+.footer__link--mail:hover, .footer__link--mail:focus,
 .footer__link--phone:hover,
-.footer__link--mail:focus,
 .footer__link--phone:focus {
   color: var(--used-color);
 }
@@ -499,15 +492,13 @@ img {
   color: var(--used-color);
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
+.footer-join__link:hover, .footer-join__link:focus {
+  color: var(--used-color);
+  background-color: var(--accent-color);
+}
 
 .footer-join__icon {
   fill: currentColor;
-}
-
-.footer-join__link:hover,
-.footer-join__link:focus {
-  color: var(--used-color);
-  background-color: var(--accent-color);
 }
 
 /*------------Форма в Footer------------*/
@@ -543,9 +534,7 @@ img {
   color: rgba(255, 255, 255, 0.6);
   transition: border var(--transition-duration) var(--transition-timing-function);
 }
-
-.footer-form__input:hover,
-.footer-form__input:focus {
+.footer-form__input:hover, .footer-form__input:focus {
   border: 1px solid rgba(33, 149, 243, 0.5);
 }
 
@@ -559,9 +548,7 @@ img {
   color: var(--used-color);
   transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
-
-.footer-form__button:hover,
-.footer-form__button:focus {
+.footer-form__button:hover, .footer-form__button:focus {
   background-color: var(--dark-accent-color);
 }
 
@@ -586,10 +573,6 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
-}
-
-.backdrop.is-hidden .modal {
-  transform: rotate(90deg);
 }
 
 .modal {
@@ -619,9 +602,7 @@ img {
   align-items: center;
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
-
-.modal__button-close:hover,
-.modal__button-close:focus {
+.modal__button-close:hover, .modal__button-close:focus {
   fill: var(--accent-color);
 }
 
@@ -629,6 +610,9 @@ img {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+.is-hidden .modal {
+  transform: rotate(90deg);
 }
 
 .modal__title {
@@ -655,16 +639,10 @@ img {
   outline: none;
   transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
-
-.form__input:hover,
-.form__input:focus,
-.form__text:hover,
-.form__text:focus {
+.form__input:hover, .form__input:focus {
   border-color: var(--accent-color);
 }
-
-.form__input:hover + .form__icon,
-.form__input:focus + .form__icon {
+.form__input:hover + .form__icon, .form__input:focus + .form__icon {
   fill: var(--accent-color);
 }
 
@@ -691,6 +669,12 @@ img {
   outline: none;
   transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
+.form__text:hover, .form__text:focus {
+  border-color: var(--accent-color);
+}
+.form__text:hover::placeholder, .form__text:focus::placeholder {
+  color: rgba(33, 149, 243, 0.5);
+}
 
 .form__text::placeholder {
   font-size: 14px;
@@ -698,11 +682,6 @@ img {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
   transition: color var(--transition-duration) var(--transition-timing-function);
-}
-
-.form__text:hover::placeholder,
-.form__text:focus::placeholder {
-  color: rgba(33, 149, 243, 0.5);
 }
 
 .form__wrap {
@@ -727,6 +706,9 @@ img {
   display: flex;
   align-items: center;
 }
+.form__checkbox-label:hover .form__checkbox-wrap {
+  border: 2px solid var(--accent-color);
+}
 
 .form__checkbox-link {
   color: var(--accent-color);
@@ -742,10 +724,6 @@ img {
   align-items: center;
   justify-content: center;
   transition: background-color var(--transition-duration) var(--transition-timing-function);
-}
-
-.form__checkbox-label:hover .form__checkbox-wrap {
-  border: 2px solid var(--accent-color);
 }
 
 .form__checkbox-input:focus + .form__checkbox-label .form__checkbox-wrap {
@@ -775,9 +753,7 @@ img {
   color: var(--used-color);
   transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
-
-.form__button-submit:hover,
-.form__button-submit:focus {
+.form__button-submit:hover, .form__button-submit:focus {
   background-color: var(--dark-accent-color);
 }
 
@@ -797,16 +773,14 @@ img {
   color: var(--main-color);
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
 }
-
-.portfolio-filter__item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.portfolio__button:hover,
-.portfolio__button:focus {
+.portfolio__button:hover, .portfolio__button:focus {
   color: var(--used-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-filter__item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio__list {
@@ -835,10 +809,11 @@ img {
   display: block;
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
-
-.portfolio__card:hover,
-.portfolio__card:focus {
+.portfolio__card:hover, .portfolio__card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio__card:hover .portfolio__thumb-text {
+  transform: translateY(0%);
 }
 
 .portfolio__thumb {
@@ -859,10 +834,6 @@ img {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
-}
-
-.portfolio__card:hover .portfolio__thumb-text {
-  transform: translateY(0%);
 }
 
 .porfolio__title-secondary {

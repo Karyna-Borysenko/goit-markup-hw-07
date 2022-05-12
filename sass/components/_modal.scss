@@ -13,10 +13,6 @@
     visibility var(--transition-duration) var(--transition-timing-function);
 }
 
-.backdrop.is-hidden .modal {
-  transform: rotate(90deg);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -49,17 +45,21 @@
   align-items: center;
 
   transition: fill var(--transition-duration) var(--transition-timing-function);
-}
 
-.modal__button-close:hover,
-.modal__button-close:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+
+  .modal {
+    transform: rotate(90deg);
+  }
 }
 
 .modal__title {
@@ -90,18 +90,15 @@
   outline: none;
   transition: border-color var(--transition-duration)
     var(--transition-timing-function);
-}
 
-.form__input:hover,
-.form__input:focus,
-.form__text:hover,
-.form__text:focus {
-  border-color: var(--accent-color);
-}
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
 
-.form__input:hover + .form__icon,
-.form__input:focus + .form__icon {
-  fill: var(--accent-color);
+    + .form__icon {
+      fill: var(--accent-color);
+    }
+  }
 }
 
 .form__label {
@@ -130,6 +127,16 @@
 
   transition: border-color var(--transition-duration)
     var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: rgba(33, 149, 243, 0.5);
+  }
 }
 
 .form__text::placeholder {
@@ -139,11 +146,6 @@
 
   color: rgba(117, 117, 117, 0.5);
   transition: color var(--transition-duration) var(--transition-timing-function);
-}
-
-.form__text:hover::placeholder,
-.form__text:focus::placeholder {
-  color: rgba(33, 149, 243, 0.5);
 }
 
 .form__wrap {
@@ -169,6 +171,12 @@
   color: var(--body-color);
   display: flex;
   align-items: center;
+
+  &:hover {
+    .form__checkbox-wrap {
+      border: 2px solid var(--accent-color);
+    }
+  }
 }
 
 .form__checkbox-link {
@@ -189,12 +197,10 @@
     var(--transition-timing-function);
 }
 
-.form__checkbox-label:hover .form__checkbox-wrap {
-  border: 2px solid var(--accent-color);
-}
-
-.form__checkbox-input:focus + .form__checkbox-label .form__checkbox-wrap {
-  border: 2px solid var(--accent-color);
+.form__checkbox-input:focus + .form__checkbox-label {
+  .form__checkbox-wrap {
+    border: 2px solid var(--accent-color);
+  }
 }
 
 .form__checkbox-icon {
@@ -202,13 +208,17 @@
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.form__checkbox-input:checked + .form__checkbox-label .form__checkbox-wrap {
-  background-color: var(--accent-color);
-  border: none;
+.form__checkbox-input:checked + .form__checkbox-label {
+  .form__checkbox-wrap {
+    background-color: var(--accent-color);
+    border: none;
+  }
 }
 
-.form__checkbox-input:checked + .form__checkbox-label .form__checkbox-icon {
-  fill: var(--used-color);
+.form__checkbox-input:checked + .form__checkbox-label {
+  .form__checkbox-icon {
+    fill: var(--used-color);
+  }
 }
 
 .form__button-submit {
@@ -222,9 +232,9 @@
 
   transition: background-color var(--transition-duration)
     var(--transition-timing-function);
-}
 
-.form__button-submit:hover,
-.form__button-submit:focus {
-  background-color: var(--dark-accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--dark-accent-color);
+  }
 }

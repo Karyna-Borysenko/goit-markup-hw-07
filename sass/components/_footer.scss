@@ -37,15 +37,12 @@
 .footer__link--mail,
 .footer__link--phone {
   color: var(--used-transparent-color);
-
   transition: color var(--transition-duration) var(--transition-timing-function);
-}
 
-.footer__link--mail:hover,
-.footer__link--phone:hover,
-.footer__link--mail:focus,
-.footer__link--phone:focus {
-  color: var(--used-color);
+  &:hover,
+  &:focus {
+    color: var(--used-color);
+  }
 }
 
 .footer-join {
@@ -83,16 +80,16 @@
   transition: color var(--transition-duration) var(--transition-timing-function),
     background-color var(--transition-duration)
       var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--used-color);
+    background-color: var(--accent-color);
+  }
 }
 
 .footer-join__icon {
   fill: currentColor;
-}
-
-.footer-join__link:hover,
-.footer-join__link:focus {
-  color: var(--used-color);
-  background-color: var(--accent-color);
 }
 
 /*------------Форма в Footer------------*/
@@ -133,11 +130,11 @@
 
   transition: border var(--transition-duration)
     var(--transition-timing-function);
-}
 
-.footer-form__input:hover,
-.footer-form__input:focus {
-  border: 1px solid rgba(33, 149, 243, 0.5);
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(33, 149, 243, 0.5);
+  }
 }
 
 .footer-form__button {
@@ -152,11 +149,11 @@
 
   transition: background-color var(--transition-duration)
     var(--transition-timing-function);
-}
 
-.footer-form__button:hover,
-.footer-form__button:focus {
-  background-color: var(--dark-accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--dark-accent-color);
+  }
 }
 
 .footer-form__button-wrap {
