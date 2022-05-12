@@ -454,9 +454,6 @@ img {
 }
 
 /*------------------------------------------------------------------portfolio.html------------------------------------------------------------------*/
-/*--Оснавная часть-main section-->*/
-
-/*------------Cекция Portfolio------------*/
 
 .portfolio-filter {
   display: flex;
@@ -476,7 +473,7 @@ img {
   transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
-.portfolio-filter-item:not(:last-child) {
+.portfolio-filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -488,20 +485,20 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-list {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   margin-right: calc(-1 * var(--main-gap));
   margin-bottom: calc(-1 * var(--main-gap));
 }
 
-.portfolio-item {
+.portfolio__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-right: var(--main-gap);
   margin-bottom: var(--main-gap);
 }
 
-.portfolio-content {
+.portfolio__content {
   padding: 20px 24px;
   background-color: var(--used-color);
   border-left: 1px solid var(--border-color);
@@ -509,25 +506,25 @@ img {
   border-bottom: 1px solid var(--border-color);
 }
 
-.portfolio-card {
+.portfolio__card {
   max-width: 370px;
   display: block;
 
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
-.portfolio-card:hover,
-.portfolio-card:focus {
+.portfolio__card:hover,
+.portfolio__card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-thumb {
+.portfolio__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-thumb-text {
+.portfolio__thumb-text {
   position: absolute;
   top: 0;
   background-color: rgba(33, 150, 243, 0.9);
@@ -546,11 +543,11 @@ img {
   overflow: auto;
 }
 
-.portfolio-card:hover .portfolio-thumb-text {
+.portfolio__card:hover .portfolio__thumb-text {
   transform: translateY(0%);
 }
 
-.porfolio-secondary-title {
+.porfolio__title-secondary {
   margin-bottom: 4px;
 
   font-size: 18px;
@@ -559,7 +556,7 @@ img {
   color: var(--main-color);
 }
 
-.portfolio-text {
+.portfolio__text {
   font-size: 16px;
   line-height: 1.88;
   color: var(--body-color);
@@ -946,7 +943,7 @@ img {
   margin: 0 auto;
   min-height: 50px;
   min-width: 200px;
- 
+
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--used-color);
