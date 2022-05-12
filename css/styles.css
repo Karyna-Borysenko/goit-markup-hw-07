@@ -411,7 +411,7 @@ img {
 
 /*------------Секция Постоянные клиенты------------*/
 
-.clients-title {
+.clients__title {
   margin-bottom: var(--title-gap);
 
   font-size: 36px;
@@ -420,16 +420,16 @@ img {
   text-align: center;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   justify-content: center;
 }
 
-.clients-item:not(:last-child) {
+.clients__item:not(:last-child) {
   margin-right: var(--main-gap);
 }
 
-.clients-link {
+.clients__link {
   display: block;
   width: 170px;
   height: 92px;
@@ -443,12 +443,12 @@ img {
   transition: color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.clients-icon {
+.clients__icon {
   fill: currentColor;
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
