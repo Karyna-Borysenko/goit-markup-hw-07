@@ -240,19 +240,19 @@ img {
 
 /*------------Секция Наши преимущества------------*/
 
-.benefits-list {
+.benefits__list {
   display: flex;
 }
 
-.benefits-item {
+.benefits__item {
   width: 270px;
 }
 
-.benefits-item:not(:last-child) {
+.benefits__item:not(:last-child) {
   margin-right: var(--main-gap);
 }
 
-.benefits-thumb {
+.benefits__thumb {
   margin-bottom: var(--main-gap);
   padding: 25px 100px;
 
@@ -261,7 +261,7 @@ img {
   border-radius: 4px;
 }
 
-.benefits-secondary-title {
+.benefits__title--secondary {
   margin-bottom: 10px;
 
   font-size: 14px;
@@ -270,7 +270,7 @@ img {
   color: var(--main-color);
 }
 
-.benefits-text {
+.benefits__text {
   line-height: 1.71;
 }
 
