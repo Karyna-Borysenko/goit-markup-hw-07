@@ -769,7 +769,7 @@ img {
   transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.modal-button-close {
+.modal__button-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -785,8 +785,8 @@ img {
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-button-close:hover,
-.modal-button-close:focus {
+.modal__button-close:hover,
+.modal__button-close:focus {
   fill: var(--accent-color);
 }
 
@@ -796,7 +796,7 @@ img {
   visibility: hidden;
 }
 
-.modal-title {
+.modal__title {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -810,11 +810,11 @@ img {
 
 /*------------Форма в модальном окне------------*/
 
-.modal-field {
+.form__field {
   margin-bottom: 10px;
 }
 
-.modal-input {
+.form__input {
   padding-left: 32px;
 
   width: 100%;
@@ -825,19 +825,19 @@ img {
   transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-input:hover,
-.modal-input:focus,
-.modal-text:hover,
-.modal-text:focus {
+.form__input:hover,
+.form__input:focus,
+.form__text:hover,
+.form__text:focus {
   border-color: var(--accent-color);
 }
 
-.modal-input:hover + .input-icon,
-.modal-input:focus + .input-icon {
+.form__input:hover + .form__icon,
+.form__input:focus + .form__icon {
   fill: var(--accent-color);
 }
 
-.modal-label {
+.form__label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -847,11 +847,11 @@ img {
   color: var(--body-color);
 }
 
-.modal-textarea-field {
+.form__textarea-field {
   margin-bottom: 20px;
 }
 
-.modal-text {
+.form__text {
   padding: 12px 16px;
 
   width: 100%;
@@ -864,7 +864,7 @@ img {
   transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-text::placeholder {
+.form__text::placeholder {
   font-size: 14px;
   line-height: 1.67;
   letter-spacing: 0.01em;
@@ -873,16 +873,16 @@ img {
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-text:hover::placeholder,
-.modal-text:focus::placeholder {
+.form__text:hover::placeholder,
+.form__text:focus::placeholder {
   color: rgba(33, 149, 243, 0.5);
 }
 
-.input-wrap {
+.form__wrap {
   position: relative;
 }
 
-.input-icon {
+.form__icon {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -891,11 +891,11 @@ img {
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-checkbox-field {
+.form__checkbox {
   margin-bottom: 30px;
 }
 
-.label-checkbox {
+.form__checkbox-label {
   line-height: 1.71px;
 
   color: var(--body-color);
@@ -903,11 +903,11 @@ img {
   align-items: center;
 }
 
-.checkbox-link {
+.form__checkbox-link {
   color: var(--accent-color);
 }
 
-.checkbox-icon-wrap {
+.form__checkbox-wrap {
   width: 16px;
   height: 15px;
   border: 2px solid var(--main-color);
@@ -920,30 +920,29 @@ img {
   transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.label-checkbox:hover .checkbox-icon-wrap {
+.form__checkbox-label:hover .form__checkbox-wrap {
   border: 2px solid var(--accent-color);
 }
 
-.modal-checkbox:focus +.label-checkbox .checkbox-icon-wrap {
+.form__checkbox-input:focus +.form__checkbox-label .form__checkbox-wrap {
   border: 2px solid var(--accent-color);
 }
 
-.checkbox-icon {
+.form__checkbox-icon {
   fill: transparent;
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-
-.modal-checkbox:checked + .label-checkbox .checkbox-icon-wrap {
+.form__checkbox-input:checked + .form__checkbox-label .form__checkbox-wrap {
   background-color: var(--accent-color);
   border: none;
 }
 
-.modal-checkbox:checked + .label-checkbox .checkbox-icon {
+.form__checkbox-input:checked + .form__checkbox-label .form__checkbox-icon {
   fill: var(--used-color);
 }
 
-.modal-button-submit {
+.form__button-submit {
   margin: 0 auto;
   min-height: 50px;
   min-width: 200px;
@@ -955,8 +954,8 @@ img {
   transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-button-submit:hover,
-.portfolio-button:focus {
+.form__button-submit:hover,
+.form__button-submit:focus {
   background-color: var(--dark-accent-color);
 }
 
