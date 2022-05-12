@@ -280,7 +280,7 @@ img {
   padding-top: 0;
 }
 
-.speciality-title {
+.speciality__title {
   margin-bottom: var(--title-gap);
 
   font-size: 36px;
@@ -289,22 +289,22 @@ img {
   color: var(--main-color);
 }
 
-.speciality-list {
+.speciality__list {
   display: flex;
 }
 
-.speciality-item:not(:last-child) {
+.speciality__item:not(:last-child) {
   margin-right: var(--main-gap);
 }
 
-.speciality-item {
+.speciality__item {
   position: relative;
 }
-.speciality-img {
+.speciality__img {
   width: 370px;
 }
 
-.speciality-text {
+.speciality__text {
   position: absolute;
   display: flex;
   left: 0;
